@@ -11,8 +11,10 @@ LED(relay_pin, active_high=False)
 
 def main_loop():
     while True:
-        sleep(2)
-        GPIO.setup(relay_pin, GPIO.OUT)
+        GPIO.output(relay_pin, 0)
+        sleep(0.5)
+        GPIO.output(relay_pin, 1)
+        sleep(0.5)
 
 
 if __name__ == "__main__":
